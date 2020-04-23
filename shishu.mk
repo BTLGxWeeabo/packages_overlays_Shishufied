@@ -55,7 +55,8 @@ DEVICE_PACKAGE_OVERLAYS += \
     packages/overlays/Shishufied/Overlays
 
 PRODUCT_PACKAGES += \
-	Shishufied
+	Shishufied \
+    SimIcons
 
 # Theme-Required overlays packages
 PRODUCT_PACKAGES += \
@@ -162,6 +163,12 @@ PRODUCT_PACKAGES += \
 ifeq ($(BOOTLEGGERS_NOTCHED),true)
     DEVICE_PACKAGE_OVERLAYS += \
         packages/overlays/Shishufied/Themes/overlay/widebois
+endif
+
+# Overlays for Shishufied devices
+ifeq ($(BOOTLEGGERS_BUILD_TYPE),Shishufied)
+    DEVICE_PACKAGE_OVERLAYS += \
+    packages/overlays/Shishufied/ShishufiedOverlays
 endif
 
 ##Quicksettings Tiles icons
